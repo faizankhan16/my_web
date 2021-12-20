@@ -30,6 +30,7 @@
 
 const persons = [{
     name: "Faizan Khan",
+    isGraduated: true,
     age: 24,
     gpa: 2.87,
     address: {
@@ -41,6 +42,7 @@ const persons = [{
 },
 {
     name: "Adam Khan",
+    isGraduated: false,
     age: 24,
     gpa: 3.24,
     address: {
@@ -52,6 +54,7 @@ const persons = [{
 },
 {
     name: "Salman Tariq",
+    isGraduated: true,
     age: 24,
     gpa: 3.11,
     address: {
@@ -65,11 +68,21 @@ const persons = [{
 // console.log(persons[1].coursesNames[2])
 // console.log(persons[1].coursesMarks[2])
 
-for (let i = 0; i<persons.length; i++){
-    console.log(persons[i].name)
-    console.log(persons[i].gpa)
-        for (let j=0; j<persons[i].coursesNames.length; j++){
-        console.log(persons[i].coursesNames[j])
-        }
-        console.log()
+// for (let i = 0; i<persons.length; i++){
+//     console.log(persons[i].name)
+//     console.log(persons[i].gpa)
+//         for (let j=0; j<persons[i].coursesNames.length; j++){
+//         console.log(persons[i].coursesNames[j])
+//         }
+//         console.log()
+// }
+
+// const sum = (a, b) => a + b;
+
+// console.log(sum(45, 32))
+
+for(let i = 0; i<persons.length; i++){
+(!persons[i].isGraduated) && console.log(persons[i])
 }
+
+const compare = (a1, a2) => (a1 > a2) ? a1 : a2;
