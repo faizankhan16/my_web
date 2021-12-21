@@ -276,6 +276,7 @@ const t2 = data1
     .filter((n) => n > 5)
     .sort((a, b) => a - b)
 
+
 console.log(t2)
 
 // Find
