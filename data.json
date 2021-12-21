@@ -1,12 +1,4 @@
-// variables
-// loops
-// functions
-// Arrays
-// OBJECTS!!!!!!!
-// Javascript Object Notation (JSON)
-// Arrow Functions
-
-const persons = [
+[
     {
         "name": "Tufail",
         "age": 28,
@@ -100,9 +92,3 @@ const persons = [
         ]
     }
 ]
-const data = [3, 3, 4, 6, 7, 4, 3, 6, 7, 6]
-
-// 
-
-
-const newArray = data.filter((value) => value > 3)

@@ -16,12 +16,12 @@ function getText() {
 }
 
 function getHTMLText() {
-   var a = document.getElementById("xyz").innerHTML;
+    var a = document.getElementById("xyz").innerHTML;
     document.getElementById("abc").innerHTML = a;
 }
 
-function changeID(){
+function changeID() {
     document.getElementById("123").id = "adg";
     document.getElementById("098").innerHTML = "Seems like you changed my ID";
-    
+
 }
