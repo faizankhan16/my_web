@@ -100,12 +100,12 @@ const persons = [
         ]
     }
 ]
-const data = [3, 3, 4, 6, 7, 4, 3, 6, 7, 6]
+// const data = [3, 3, 4, 6, 7, 4, 3, 6, 7, 6]
 
 // 
 
 
-const newArray = data.filter((value) => value > 3)
+// const newArray = data.filter((value) => value > 3)
 // function emp(){
 //     const a = 10
 //     const b = 20
@@ -224,7 +224,7 @@ const newArray = data.filter((value) => value > 3)
 // console.log(avg)
 // console.log(perc+"%");
 
-// (perc >= 60) ? console.log("Pass sho") : console.log("Fail sho")
+// (perc >= 60) ? console.log("Pass sho") : console.log("Sar ye ukhwaro")
 
 // const num1 = 7, num2 = 5, num3 = 8
 
@@ -242,3 +242,50 @@ const newArray = data.filter((value) => value > 3)
 
 // const vowels = alphabets.filter((alp) => alp==="a" || alp==="e" || alp==="i" || alp==="o" || alp==="u" )
 // console.log(vowels)
+
+// Maps
+const squares = [];
+const data1 = [33, 3, 4, 6, 7, 4, 3, 6, 7, 6]
+const names = ["Faizan", "Uzair", "Tufail", "Fawad", "Usama"]
+const data2 = data1.map(n => n * n)
+const marks = [];
+// for(let i=0;i<data1.length;i++) {
+//     squares[i] = data1[i] * data1[i];
+// }
+
+// data1.forEach((n) => {
+//     squares[i] = n * n;
+// })
+// Find
+
+// const result = names.find((name) => name === "xyz")
+
+// if (result) {
+//     console.log("Yah we found it!")
+// }
+// else {
+//     console.log("Not found :(")
+// }
+
+// Reduce
+const r = data1.reduce((prev, next) => prev + next, 0)
+console.log(r)
+
+const t2 = data1
+    .map((n) => n * n)
+    .filter((n) => n > 5)
+    .sort((a, b) => a - b)
+
+console.log(t2)
+
+// Find
+// Fill
+// Sort
+// const t = data1.sort()
+// const t = data1.sort((a, b) => b - a)
+
+// console.log(t)
+// Reverse
+
+// Strings
+
