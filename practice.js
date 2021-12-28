@@ -69,11 +69,13 @@
 //     const grad = persons.filter((person) => !person.isGraduated)
 //     console.log(grad)
 
-const alphabet = 'x';
-const vowelsArray = ["a", "e", "i", "o", "u"];
+// const alphabet = 'x';
+// const vowelsArray = ["a", "e", "i", "o", "u"];
 
-// if (alphabet === "a" || alphabet === "e" || alphabet === "i" || alphabet === "o" || alphabet === "u" ) console.log(alphabet+" is a vowel")
-// else console.log(alphabet+" is not a vowel")
+// // if (alphabet === "a" || alphabet === "e" || alphabet === "i" || alphabet === "o" || alphabet === "u" ) console.log(alphabet+" is a vowel")
+// // else console.log(alphabet+" is not a vowel")
 
-const index = vowelsArray.indexOf(alphabet);
-index === -1 ? console.log(alphabet+" is not a vowel") : console.log(alphabet+" is a vowel")
+// const index = vowelsArray.indexOf(alphabet);
+// index === -1 ? console.log(alphabet+" is not a vowel") : console.log(alphabet+" is a vowel")
+
+
