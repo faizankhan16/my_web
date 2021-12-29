@@ -102,7 +102,7 @@ const persons = [
 ]
 // const data = [3, 3, 4, 6, 7, 4, 3, 6, 7, 6]
 
-// 
+//
 
 
 // const newArray = data.filter((value) => value > 3)
@@ -244,11 +244,11 @@ const persons = [
 // console.log(vowels)
 
 // Maps
-const squares = [];
-const data1 = [33, 3, 4, 6, 7, 4, 3, 6, 7, 6]
-const names = ["Faizan", "Uzair", "Tufail", "Fawad", "Usama"]
-const data2 = data1.map(n => n * n)
-const marks = [];
+// const squares = [];
+// const data1 = [33, 3, 4, 6, 7, 4, 3, 6, 7, 6]
+// const names = ["Faizan", "Uzair", "Tufail", "Fawad", "Usama"]
+// const data2 = data1.map(n => n * n)
+// const marks = [];
 // for(let i=0;i<data1.length;i++) {
 //     squares[i] = data1[i] * data1[i];
 // }
@@ -268,16 +268,16 @@ const marks = [];
 // }
 
 // Reduce
-const r = data1.reduce((prev, next) => prev + next, 0)
-console.log(r)
+// const r = data1.reduce((prev, next) => prev + next, 0)
+// console.log(r)
 
-const t2 = data1
-    .map((n) => n * n)
-    .filter((n) => n > 5)
-    .sort((a, b) => a - b)
+// const t2 = data1
+//     .map((n) => n * n)
+//     .filter((n) => n > 5)
+//     .sort((a, b) => a - b)
 
 
-console.log(t2)
+// console.log(t2)
 
 // Find
 // Fill
@@ -290,3 +290,74 @@ console.log(t2)
 
 // Strings
 
+// const firstName = "Faizan";
+// const lastName = "Khan";
+// // Template Literals
+// console.log("Hello " + firstName + " " + lastName)
+// console.log(`Hello ${firstName} ${lastName} and length is ${firstName.length + lastName.length}`)
+
+// const greeting = `1, tufail, "tufail is a very good person, and his location is tahkal"`
+// const greeting = `FaizanKhanFaizan@gmail.com`
+
+// const data = greeting.split("|")
+
+// console.log(data)
+
+// const result = greeting.replace("Faizan", "Uzair")
+// const result2 = greeting.indexOf("Khan")
+// console.log(result2)
+
+// const arr1 = [20,30,50];
+// const arr2 = [2, 2, 2, ...arr1, 2, 2]
+
+// DESTRUCTORING
+
+
+const myData = {
+    "name": "Tufail",
+    "age": 28,
+    "address": {
+        "house": 335,
+        "street": 10,
+        "sector": "k4",
+        "phase": 3
+    },
+    "gpa": 2.91,
+    "courses_names": [
+        "C++",
+        "Java",
+        "Python",
+        "Javascript"
+    ],
+    "courses_marks": [
+        50,
+        60,
+        70,
+        80
+    ]
+}
+
+// const age = myData.age;
+// const name = myData.name;
+// const gpa = myData.gpa;
+
+// const printData = ({ name, age, gpa }) => {
+//     console.log(name)
+//     console.log(age)
+//     console.log(gpa)
+// }
+// printData(myData[0])
+// const { name, age, gpa } = myData;
+
+const coord = [45.5, 32.45]
+
+const new_data = {
+    ...myData,
+    "latlon": coord
+}
+
+// Regular Expressions
+// Object Destructoring
+// Array Destructoring
+// Spread Operator
+    // Arrays and Objects
