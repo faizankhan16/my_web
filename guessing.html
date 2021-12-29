@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let tries = 5;
+        let num = Math.floor((Math.random() * 30) + 1);
+        console.log(num)
+        const compare = () => {
+            const n = parseInt(document.getElementById("enterNumber").value)
+            // console.log(typeof(n))
+            if (num === n) {
+                alert("You win!")
+                document.location.reload()
+            }
+            else {
+                tries--;
+                if (tries === 0) {
+                    const playAgain = confirm(`The guessed number was ${num}\nDo you want to play again?`)
+                    if (playAgain) {
+                        document.location.reload()
+                    }
+
+                }
+                if(n < num){
+                    alert("Please choose a greater number")
+                }
+                else{
+                    alert("Please choose a smaller number")
+                }
+                document.getElementById("triesPara").innerHTML = `I have guessed a number, and you have ${tries} tries`
+            }
+        
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="triesPara">I have guessed a number, and you have
+        <script>document.write(tries)</script> tries
+    </h1>
+    <input type="text" name="enterNumber" placeholder="Type your number here" id="enterNumber">
+    <button onclick="compare()">Submit</button>
+</body>
+
+</html>

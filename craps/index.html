@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAPS</title>
+    <script>
+        
+        let firstRoll = true
+        let point;
+        function roll () {
+            let dice1 = Math.floor((Math.random() * 6) + 1);
+            let dice2 = Math.floor((Math.random() * 6) + 1);
+            const sum = dice1 + dice2
+            document.getElementById("images").innerHTML = `<img src="images/${dice1}.png" /><img src="images/${dice2}.png" />`
+            if(firstRoll && (sum === 7 || sum === 11)) {
+                alert("You win!!!! "+sum)
+                document.location.reload()
+            }
+            else if( firstRoll && (sum === 2 || sum === 3 || sum === 12)) {
+                alert("You lose! \nCraps! "+sum)
+                const btn = document.querySelector("#btn");
+                btn.innerHTML = "Play again!"
+                btn.setAttribute("onclick", "tryAgain()")
+            }
+            else {
+                if(sum === point) {
+                    alert("You win! "+sum)
+                    document.location.reload()
+                }
+                if(sum === 7) {
+                    alert("You lose! "+sum)
+                    const btn = document.querySelector("#btn");
+                    btn.innerHTML = "Play again!"
+                    btn.setAttribute("onclick", "tryAgain()")
+                }
+                if(firstRoll) {
+                point = sum
+                firstRoll = false
+               }
+            }
+
+        }
+        function tryAgain () {
+            document.location.reload()
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Hello! Welcome to the game of Craps!</h1>
+    <div id="images">
+    </div>
+    <button id="btn" onclick="roll()">Roll Dice</button>
+    
+</body>
+</html>

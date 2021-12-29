@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="getreq">Request</button><br><br>
+    <script src="/first.js"></script>
+            
+    <script>
+        // let emp = {
+        //     "empName" : "Haris Saeed",
+        //     "empAge" : 23,
+        //     "empRole" : "Software Tester"
+        // }
+
+        // emp.Degree = "Software Engineering";
+        // delete emp.empAge;
+
+        // for(let empData in emp){
+        //     console.log(`${empData} : ${emp[empData]}`)
+        // }
+
+
+
+        // let emp ={
+        //     "employee" : ["Haris Saeed", "Software Engineering", "Software Tester"]
+        // }
+
+
+        let employee = {
+            "empData" : [
+                {
+                    "empName" : "Haris Saeed",
+                    "empAge" : 23,
+                    "empDept" : "Software Engineering",
+                    "empRole" : "Software Tester"
+                },
+                {
+                    "empName" : "Fawad Shezada",
+                    "empAge" : 25,
+                    "empDept" : "Software Engineering",
+                    "empRole" : "Automation Tester"
+                },
+                {
+                    "empName" : "Uzair Khan",
+                    "empAge" : 23,
+                    "empDept" : "Software Engineering",
+                    "empRole" : "Frontend Developer"
+                },
+            ]
+        }
+
+        for(let data of employee.empData){
+            document.write(`${data.empName} is ${data.empAge} years old` + "<br>")
+        }
+    </script>
+    </body>
+</html>
