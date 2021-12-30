@@ -361,3 +361,121 @@ const new_data = {
 // Array Destructoring
 // Spread Operator
     // Arrays and Objects
+
+// switch
+// const data = ["b", 'c', 'd','e','f','x','a','i','w','u','z', 'o']
+
+// let vowel = 0
+// let nonvowel = 0;
+// // data.forEach (a => {
+// //     switch(a) {
+// //         case 'a':
+// //         case 'e':
+// //         case 'i':
+// //         case 'o':
+// //         case 'u':
+// //             vowel++;
+// //             break;           
+// //         default:
+// //             nonvowel++;
+// //     }
+// // // if ( a === "a" || a === "e" || a === "i" || a === "o" || a === "u") {
+// // //     vowel++
+// // // }
+// // } )
+// // console.log(vowel)
+
+
+// // const num = 11
+// // switch (num % 2 === 0 ) {
+// //         case 0:
+// //             console.log("Even")
+// //             break;
+        
+// //         default:
+// //             console.log("Odd")
+// // }
+
+// const weekday = 9
+// switch (weekday) {
+//         case 1:
+//             console.log("Monday")
+//             break;
+
+//         case 2:
+//             console.log("Tuesday")
+//             break;
+
+//         case 3:
+//             console.log("Wednesday")
+//             break;
+
+//         case 4:
+//             console.log("Thursday")
+//             break;
+
+//         case 5:
+//             console.log("Friday")
+//             break;
+
+//         case 6:
+//             console.log("Saturday")
+//             break;
+
+//         case 7:
+//             console.log("Sunday")
+//             break;
+
+//         default:
+//             console.log("Not a valid entry")
+// }
+
+const date = "30-4-1997";
+let [day, month, year] = date.split("-")
+// console.log(newArr)
+
+// const day = newArr[0]
+// const month = newArr[1]
+// const year = newArr[2]
+switch(month) {
+    case "1":
+        month = "January" 
+        break;
+    case "2":
+        month = "February" 
+        break;
+    case "3":
+        month = "March" 
+        break;
+    case "4":
+        month = "April" 
+        break;
+    case "5":
+        month = "May" 
+        break;
+    case "6":
+        month = "June" 
+        break;
+    case "7":
+        month = "July" 
+        break;
+    case "8":
+        month = "August" 
+        break;
+    case "9":
+        month = "September" 
+        break;
+    case "10":
+        month = "October" 
+        break;
+    case "11":
+        month = "November" 
+        break;
+    case "12":
+        month = "December" 
+        break;
+    
+    default:
+        month = "err"
+}
+console.log(`${day}-${month}-${year}`)
