@@ -1,8 +1,7 @@
-export default class Products {
+module.exports = class Products {
     name
     model
     camera
-    static x
     constructor(model, camera) {
         model = model;
         camera = camera;
