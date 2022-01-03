@@ -1,7 +1,11 @@
-const Products = require('./classes')
+const Android = require('./classes')
 
-const redmi = new Products("X", 50);
-const iphone = new Products();
+const redmi = new Android("Redmi", "Note 10", "48 MP");
+const iphone = new Android();
 
-redmi.x = 10;
-console.log(redmi.x)
+// redmi.model = "Note 10";
+console.log(redmi.name)
+console.log(redmi.model)
+console.log(redmi.camera)
+// redmi.call()
+redmi.message(6, 10)

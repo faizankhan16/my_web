@@ -66,19 +66,19 @@
 //         coursesMarks: [88, 96,59]
 //     }]
 
-    // persons.map((person) =>{
-    //     const newGPA = person.gpa + 2    
-    //     console.log(newGPA)        
-    //     });
-    
-    // persons.map((person) => {
-    //     var sum = 0
-    //     person.coursesMarks.forEach(num => {
-    //         sum = sum + num
-            
-    //     });
-    //     console.log(person.name+" = "+(sum/(person.coursesMarks.length)))
-    // })
+// persons.map((person) =>{
+//     const newGPA = person.gpa + 2    
+//     console.log(newGPA)        
+//     });
+
+// persons.map((person) => {
+//     var sum = 0
+//     person.coursesMarks.forEach(num => {
+//         sum = sum + num
+
+//     });
+//     console.log(person.name+" = "+(sum/(person.coursesMarks.length)))
+// })
 
 //     const grad = persons.filter((person) => !person.isGraduated)
 //     console.log(grad)
@@ -212,9 +212,169 @@
 // }
 
 // nums.forEach(a => console.log(a))
-let arr = []
-for(var i=0; i<100; i++){
-const r = Math.floor((Math.random() * 100) + 1);
-arr[i] = r
+// let arr = []
+// for(var i=0; i<100; i++){
+// const r = Math.floor((Math.random() * 100) + 1);
+// arr[i] = r
+// }
+// console.log(arr)
+
+
+// const line = "Hello how are you?"
+
+// const sl = line.slice(0, line.length-8)
+
+// console.log(sl)
+
+// const arr1 = [1,2,3,4,5, 199]
+// const arr2 = [6,7,8,...arr1, 9,10, 653]
+
+// const name = "Hello! My name is Faizan Khan. "
+// const intro = "I am 24 years old"
+
+// const arr3 = name.concat(intro)
+
+// console.log(arr2.sort((a, b) => a-b))
+
+
+
+// const persons = [
+//     {
+//         "name": "Tufail",
+//         "age": 28,
+//         "address": {
+//             "house": 335,
+//             "street": 10,
+//             "sector": "k4",
+//             "phase": 3
+//         },
+//         "gpa": 2.91,
+//         "courses_names": [
+//             "C++",
+//             "Java",
+//             "Python",
+//             "Javascript"
+//         ],
+//         "courses_marks": [
+//             50,
+//             60,
+//             70,
+//             80
+//         ]
+//     },
+//     {
+//         "name": "Faizan",
+//         "age": 24,
+//         "address": {
+//             "house": 335,
+//             "street": 10,
+//             "sector": "k4",
+//             "phase": 3
+//         },
+//         "gpa": 2.86,
+//         "courses_names": [
+//             "C++",
+//             "Java",
+//             "Python",
+//             "Javascript"
+//         ],
+//         "courses_marks": [
+//             50,
+//             60,
+//             70,
+//             80
+//         ]
+//     },
+//     {
+//         "name": "Haider",
+//         "age": 28,
+//         "address": {
+//             "house": 335,
+//             "street": 10,
+//             "sector": "k4",
+//             "phase": 3
+//         },
+//         "gpa": 2.91,
+//         "courses_names": [
+//             "C++",
+//             "Java",
+//             "Python",
+//             "Javascript"
+//         ],
+//         "courses_marks": [
+//             50,
+//             60,
+//             70,
+//             80
+//         ]
+//     },
+//     {
+//         "name": "Mohsin",
+//         "age": 28,
+//         "address": {
+//             "house": 335,
+//             "street": 10,
+//             "sector": "k4",
+//             "phase": 3
+//         },
+//         "gpa": 2.91,
+//         "courses_names": [
+//             "C++",
+//             "Java",
+//             "Python",
+//             "Javascript"
+//         ],
+//         "courses_marks": [
+//             50,
+//             60,
+//             70,
+//             80
+//         ]
+//     }
+// ]
+
+const myData = {
+    "name": "Faizan Khan",
+    "age": 24,
+    "address": {
+        "house": 335,
+        "street": 10,
+        "sector": "k4",
+        "phase": 3
+    },
+    "gpa": 2.86,
+    "courses_names": [
+        "C++",
+        "Java",
+        "Python",
+        "Javascript"
+    ],
+    "courses_marks": [
+        90,
+        98,
+        97,
+        98
+    ]
 }
-console.log(arr)
+// const name = persons.name
+// const age = persons.age
+// const gpa = persons.gpa
+
+// const printData = ({name, age, gpa}) => {
+//     console.log(name)
+//     console.log(age)
+//     console.log(gpa)
+//     // console.log(address)
+// } 
+
+// printData(persons[1])
+
+const marks = ["Linear Algebra", "Numerical Methods", "Quantum Mechanics", "General Relativity"]
+
+const newData = {
+    ...myData,
+    "courses_names": marks
+    
+}
+
+console.log(newData)
