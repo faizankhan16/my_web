@@ -333,29 +333,29 @@
 //     }
 // ]
 
-const myData = {
-    "name": "Faizan Khan",
-    "age": 24,
-    "address": {
-        "house": 335,
-        "street": 10,
-        "sector": "k4",
-        "phase": 3
-    },
-    "gpa": 2.86,
-    "courses_names": [
-        "C++",
-        "Java",
-        "Python",
-        "Javascript"
-    ],
-    "courses_marks": [
-        90,
-        98,
-        97,
-        98
-    ]
-}
+// const myData = {
+//     "name": "Faizan Khan",
+//     "age": 24,
+//     "address": {
+//         "house": 335,
+//         "street": 10,
+//         "sector": "k4",
+//         "phase": 3
+//     },
+//     "gpa": 2.86,
+//     "courses_names": [
+//         "C++",
+//         "Java",
+//         "Python",
+//         "Javascript"
+//     ],
+//     "courses_marks": [
+//         90,
+//         98,
+//         97,
+//         98
+//     ]
+// }
 // const name = persons.name
 // const age = persons.age
 // const gpa = persons.gpa
@@ -369,12 +369,128 @@ const myData = {
 
 // printData(persons[1])
 
-const marks = ["Linear Algebra", "Numerical Methods", "Quantum Mechanics", "General Relativity"]
+// const marks = ["Linear Algebra", "Numerical Methods", "Quantum Mechanics", "General Relativity"]
 
-const newData = {
-    ...myData,
-    "courses_names": marks
+// const newData = {
+//     ...myData,
+//     "courses_names": marks
     
-}
+// }
 
-console.log(newData)
+// console.log(newData)
+
+
+//     const circle = {
+//         radius,
+//         area: function (ar) {
+//             ar = (3.14)*this.radius*this.radius
+//             console.log(ar);
+//     }
+// }
+// circle.area()
+  
+
+//     function createCircle (radius) {
+//         return{
+//             radius,
+//         area: function () {
+//             ar = Math.PI*this.radius*this.radius
+//             console.log(ar);
+//     }
+// }
+//     }
+// createCircle(3).area()
+// createCircle(4).area()
+// createCircle(5).area()
+ 
+// const array = [5, 12, 316, 16, 2, 3, 946, 16, 845, 346, 41, 34, 64, 1]
+// const array2 = ['My', 'name', 'is', 'Faizan', ...array,  'and', 'my', 'last', 'name', 'is', 'Khan']
+// // let val = Array.isArray(array)
+// // array.splice(2,6)
+// // array.sort((a, b) => a-b)
+// // let min = Math.min(array)
+// console.log(array)
+
+// const Data = {
+//     name: 'Faizan',
+//     // age: 25,
+
+//     yearOfBirth: function(age){
+//         return 2022 - age
+//     }
+// }
+
+// console.log(Data.yearOfBirth(25))
+
+// let day;
+
+// switch(new Date().getDay()){
+//     case 0 :
+//         day = 'Sunday'
+//         break
+//     case 1 :
+//         day = 'Monday'
+//         break
+//     case 2 :
+//         day = 'Tuesday'
+//         break
+//     case 3 :
+//         day = 'Thursday'
+//         break
+//     case 4 :
+//         day = 'Thursday'
+//         break
+//     case 5 :
+//         day = 'Friday'
+//         break
+//     case 6 :
+//         day = 'Saturday'
+//         break
+// }
+// console.log(`Today is ${day}`)
+
+
+// (function(n){
+//     console.log(n*n)
+// })(16)
+
+// function square(n){
+//     return n*n
+// }
+// console.log(square(16))
+
+// let square = function(n){
+//     return n*n
+// }
+
+// console.log(square(8))
+
+// const square = (n => n*n);
+
+// console.log(square(8))
+
+
+// for (let i = 0; i<10; i++){
+//     if (i === 8){
+//         console.log('This is it')
+//         continue
+//     }
+
+//     console.log(i)
+// }
+
+// let i = 0
+
+// while(i<16){
+//     console.log(i)
+//     i++
+// }
+
+let rockets = ['Falcon 1', 'Falcon 9', 'Saturn V', 'Starship', 'Falcon Heavy']
+
+// rockets.forEach((n, m) => console.log((`${m} : ${n}`)))
+// rockets.map(n => console.log(n>))
+
+for (let x in rockets){
+    console.log(`${rockets[x]}`)
+}
