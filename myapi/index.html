@@ -7,8 +7,7 @@
     <title>API using AJAX</title>
 </head>
 <body>
-    <button onclick="getData()">Get Data</button>
-    <div id="records"></div>
+    <button onclick={getData()}>Get Data</button>
     <script>
         function getData() {
             const URL = "https://api.github.com/users";
@@ -18,10 +17,26 @@
             xhr.onreadystatechange = function() {
                 if(xhr.readyState === 4 && xhr.status === 200) {
                     const data = JSON.parse(xhr.responseText);
-                    
-                    
-                }
+                    document.write('<center> <table border="1" class="table">')
+                        document.write("<tr>")
+                            document.write("<th>Serial No.</th>")
+                            document.write("<th>Login</th>")
+                            document.write("<th>ID</th>")
+                            document.write("<th>Node ID</th>")
+                            document.write("<th>Image</th>")
+                            document.write("</tr>")
+                        for (let a=0; a < data.length; a++) {
+                        document.write("<tr>")
+                            document.write(`<td>${a+1}</td>`)
+                            document.write(`<td textAlign>${data[a].login}</td>`)
+                            document.write(`<td>${data[a].id}</td>`)
+                            document.write(`<td>${data[a].node_id}</td>`)
+                            document.write(`<td><img src=${data[a].avatar_url} height="50px" width="50px"></td>`)
+                            document.write("</tr>");
+                    }
             }
+        }
+            document.write("</table> </center>")
             xhr.send();
         }
     </script>

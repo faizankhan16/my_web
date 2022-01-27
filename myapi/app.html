@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app using API</title>
+</head>
+
+<body>
+    <button onclick="getData()">Click</button>
+    <div id="ques"></div>
+    <dl>
+        <script>
+            
+            function getData() {
+                const URL = "https://opentdb.com/api.php?amount=10&type=multiple"
+                const xhr = new XMLHttpRequest()
+                xhr.open("GET", URL)
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        const { results } = JSON.parse(xhr.responseText)
+                        let ques = ""
+                        console.log(results)
+                        results
+                            .map(result => {
+                                let answers = result.incorrect_answers;
+                                answers = [...answers, result.correct_answer]
+                                answers = answers.sort(() => Math.random() - 0.5)
+                                ques = ques + `
+                                                <dt>${result.question}</dt>
+                                                
+                                    `;
+                                console.log(answers)
+                            });
+
+                        document.getElementById('ques').innerHTML = ques
+                    }
+                }
+
+                xhr.send()
+            }
+
+        </script>
+    </dl>
+</body>
+
+</html>
