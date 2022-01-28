@@ -13,7 +13,15 @@
     <div id="ques"></div>
     <dl>
         <script>
-            
+            var score = 0;
+            function checkAnswer(selected,correct_answer) {
+                if(selected === correct_answer) {
+                    alert('answer is correct.')
+                }
+                else {
+                    alert('incorrect')
+                }
+            }
             function getData() {
                 const URL = "https://opentdb.com/api.php?amount=10&type=multiple"
                 const xhr = new XMLHttpRequest()
@@ -23,26 +31,26 @@
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         const { results } = JSON.parse(xhr.responseText)
                         let ques = ""
+                        
                         console.log(results)
                         results
-                            .map(result => {
+                            .map((result, index) => {
                                 let answers = result.incorrect_answers;
                                 answers = [...answers, result.correct_answer]
                                 answers = answers.sort(() => Math.random() - 0.5)
-                                ques = ques + `
-                                                <dt>${result.question}</dt>
-                                                
-                                    `;
-                                console.log(answers)
+                                ques = ques + `<dt>${result.question}</dt>
+                                                ${
+                                                    answers.map(a => {
+                                                        return `<dd><input type="radio" name="${index}" onclick="checkAnswer(${a},${result.correct_answer})"/>
+                                                            <label>${a}</label><br></dd>`
+                                                    })
+                                                }`
                             });
-
                         document.getElementById('ques').innerHTML = ques
                     }
                 }
-
                 xhr.send()
             }
-
         </script>
     </dl>
 </body>
