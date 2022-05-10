@@ -24,7 +24,7 @@
             }
             function getData() {
                 const URL = "https://opentdb.com/api.php?amount=10&type=multiple"
-                const xhr = new XMLHttpRequest()
+                const xhr = new XMLHttpsRequest()
                 xhr.open("GET", URL)
 
                 xhr.onreadystatechange = function () {
@@ -41,7 +41,7 @@
                                 ques = ques + `<dt>${result.question}</dt>
                                                 ${
                                                     answers.map(a => {
-                                                        return `<dd><input type="radio" name="${index}" onclick="checkAnswer(${a},${result.correct_answer})"/>
+                                                        return `<dd><input type="radio" name="${index}" onclick="checkAnswer(${a},${result.correct__answer})"/>
                                                             <label>${a}</label><br></dd>`
                                                     })
                                                 }`
